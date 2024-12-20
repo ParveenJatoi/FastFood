@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ff4757;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s;
+}
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ;
+}
+.navbar .logo:hover {
+    color: #feb47b; /* Hover effect on the logo */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.navbar .nav-links a:hover {
+    color: #ff4757;
+    background-color: rgb(249, 237, 167);
+}
+
+.hero-section {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+.slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden; /* Ensures that no extra space is visible */
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    width: 300%; /* Account for three slides */
+    animation: slide 9s infinite;
+}
+
+.slide {
+    width: 100%; /* Each slide takes up 100% of the viewport width */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%; /* Make the image fit within the slide */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the entire slide without distortion */
+}
+
+/* Animation for sliding effect */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+.menu-section {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.menu-section h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #ff4757;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.menu-item h3 {
+    margin: 15px 0;
+    color: hsl(0, 8%, 12%);
+}
+
+.menu-item p {
+    color: #666;
+}
+
+.menu-item .price {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4757;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+
+
+/* About Section Styling */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color:gold;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: hwb(1 28% 0%);
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color:black;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color:wheat;
+}
+
+.contact-section p {
+    margin: 10px 0;
+    color: hsla(0, 44%, 89%, 0.838);
+}
+#menu{
+    background-color: hsl(20, 98%, 48%);
+}
+
+.menu-section h2{
+    color: #f1f1f1;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    font-family:Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: rgb(154, 255, 71);
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: hwb(14 2% 7%); /* Hover color */
+}
+
+
+.navbar .nav-links li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(255, 0, 0);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-links li:hover::after {
+    width: 100%;
+}
+
+/* Dropdown effect for further customization (optional) */
+.navbar .nav-links li:hover > ul {
+    display: block;
+}
